@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"  alignment="center"  fx:controller="controller.AddToCatalogueController"  spacing="10"  styleClass="root">
+    <GridPane alignment="center"  hgap="10" vgap="10" >
+        <stylesheets>
+            <URL value="@computerbuilder.css" />
+        </stylesheets>
+        <Label text="Type: " GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField  fx:id="typeTf" styleClass="field" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="Name: " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField  fx:id="nameTf" styleClass="field" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Price: " GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField  fx:id="priceTf" styleClass="field" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    </GridPane>
+
+    <Button  styleClass="button" text="Add to CataLogue" onAction="#add2Cat" />
+</VBox>
+

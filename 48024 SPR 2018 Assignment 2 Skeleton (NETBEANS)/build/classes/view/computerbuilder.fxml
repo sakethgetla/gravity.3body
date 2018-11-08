@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml"  fx:controller="controller.ComputerBuilderController"
+      alignment="center" spacing="10"  styleClass="root">
+
+  <ImageView>
+    	<image>
+		<Image url="@parts.jpg"/>
+	</image>
+  </ImageView>
+
+  <Text styleClass="h1" text="Computer Builder" />
+    <HBox alignment="center" spacing="10">
+
+      <Button fx:id="viewCalBtn" styleClass="largeButton"
+	      text="${'View\nCatalogue'}" onAction="#viewCatalogue"/>
+      
+      <Button fx:id="viewBldBtn" styleClass="largeButton"
+	      text="${'View\nBuild'}" onAction="#viewBuild" />
+     </HBox>
+     <Button fx:id="quitBtn" styleClass="button" text="Quit" onAction="#quit" />
+
+     <stylesheets>
+       
+        <URL value="@computerbuilder.css"/>
+    </stylesheets>
+
+</VBox>

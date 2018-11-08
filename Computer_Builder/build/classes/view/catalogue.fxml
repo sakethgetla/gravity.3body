@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import controller.CatalogueController?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"  fx:controller="controller.CatalogueController" spacing="10"  styleClass="root">
+        <ImageView>
+    	  <image>
+		<Image url="@parts.jpg"/>
+	  </image>
+	</ImageView>
+	<Text styleClass="h1" text="Filters" />
+	<stylesheets>
+          <URL value="@computerbuilder.css"/>
+	</stylesheets>
+
+	<!--
+	    <VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CatalogueController"  alignment="center" spacing="10"  styleClass="root">
+
+
+        
+	-->
+
+</VBox>
+

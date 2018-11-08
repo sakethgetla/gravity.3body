@@ -1,0 +1,80 @@
+package controller;
+
+import au.edu.uts.ap.javafx.*;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.*;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.scene.text.*;
+import javafx.stage.Stage;
+import model.*;
+
+public class BuildController extends Controller<Build> {
+
+    @FXML
+    private TableView<Part> partsTv;
+    @FXML
+    private Button removeSelectedBtn;
+
+    @FXML
+    private Text price;
+
+    @FXML
+    private void initialize() {
+
+        partsTv.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        //        price.setText(getModel().totalPrice());
+
+        partsTv.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldSubject, newSubject) -> removeSelectedBtn.setDisable(newSubject == null)
+        );
+
+	//	ObservableList<Integer> ob = FXCollections.observableArrayList(intList);
+	getModel().getParts().addListener(new ListChangeListener<Part>() {
+        @Override
+        public void onChanged(javafx.collections.ListChangeListener.Change<? extends Part> c) {
+	    //            System.out.println("Changed on " + );
+	    //  if(c.next()){
+	      System.out.println("adwawd");
+
+	      
+	    //            }
+
+        }
+
+    });
+
+    }
+
+    private ObservableList<Part> getSelectedParts() {
+
+        return partsTv.getSelectionModel().getSelectedItems();
+    }
+
+    public final Build getModel() {
+        return model;
+    }
+
+    public final Stage getStage() {
+        return stage;
+    }
+
+    @FXML
+    private void checkBuild(ActionEvent event) throws Exception {
+        ViewLoader.showStage(getModel(), "/view/buildcheck.fxml", "Build Validity Status", new Stage());
+    }
+
+    @FXML
+    private void removeSelected(ActionEvent event) {
+        getModel().remove(getSelectedParts());
+    }
+
+    @FXML
+    private void close(ActionEvent event) throws Exception {
+        getStage().close();
+
+    }
+
+}

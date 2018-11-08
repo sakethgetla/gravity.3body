@@ -1,0 +1,12 @@
+[y] The Main menu window is at least partially done.
+[y] The Main menu window is done.
+[y] The Catalogue menu window is at least partially done.
+[y] The Catalogue menu window is done.
+[y] The Add New Part window is at least partially done.
+[y] The Add New Part window is done.
+[y] The Error window is at least partially done.  
+[y] The Error window is done.
+[y] The Build window is at least partially done.
+[y] The Build window is done.
+[y] The Build Check window is at least partially done.
+[y] The Build Check window is done.
